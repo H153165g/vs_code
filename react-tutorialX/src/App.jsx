@@ -8,7 +8,8 @@ export default function App() {
   const [zItem, setZItem] = useState("");
   const [ukus, setUkus] = useState("us");
   const [f, setF] = useState("94");
-  const [Player, setPlayer] = useState("Bob")
+  const [Player, setPlayer] = useState("");
+  const [Kane,setKane]=useState("");
 
   const generateStory = () => {
     if (showStory) {
@@ -19,9 +20,11 @@ export default function App() {
 
     if (ukus === "uk") {
       setF("34");
+      setKane("21stone");
     }
     if(ukus === "us"){
       setF("94")
+      setKane("300ponds")
     }
     setShowStory(true);
   };
@@ -49,8 +52,8 @@ export default function App() {
         <p>
           It was {f} fahrenheit outside, so {xItem} went for a walk. When they
           got to {yItem}, they stared in horror for a few moments, then {zItem}.
-          {Player} saw the whole thing, but was not surprised — {xItem} weighs 300
-          pounds, and it was a hot day.
+          {Player} saw the whole thing, but was not surprised — {xItem} weighs {Kane},
+           and it was a hot day.
         </p>
       )}
     </>
